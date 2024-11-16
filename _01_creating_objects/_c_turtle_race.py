@@ -33,13 +33,18 @@ if __name__ == '__main__':
     draw_background()
 
     # TODO 1) Create an empty list of turtles
-
+    Shrek = turtle.Turtle()
+    william_beckwith = turtle.Turtle()
+    ur_dad_left_for_da_milk = turtle.Turtle()
+    sparsh_thakore = turtle.Turtle()
     # TODO 2) Create a new turtle and set its shape to 'turtle
+    Pneumonoultramicroscopicsilicovolcanoconiosis_turtle = turtle.Turtle()
+    Pneumonoultramicroscopicsilicovolcanoconiosis_turtle.shape('turtle')
 
     # TODO 3) Set the turtle's speed to 3
-
+    Pneumonoultramicroscopicsilicovolcanoconiosis_turtle.speed(3)
     # TODO 4) Set the turtle's pen up
-
+    Pneumonoultramicroscopicsilicovolcanoconiosis_turtle.penup()
     # TODO 5) Use the turtle's goto() method to set its position on the left
     #  side of the screen
 
