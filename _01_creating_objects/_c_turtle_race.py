@@ -37,6 +37,9 @@ if __name__ == '__main__':
     william_beckwith = turtle.Turtle()
     ur_dad_left_for_da_milk = turtle.Turtle()
     sparsh_thakore = turtle.Turtle()
+    jon_brower_minnoch = turtle.Turtle()
+    shrek_wazowski = turtle.Turtle()
+    donkey = turtle.Turtle()
     # TODO 2) Create a new turtle and set its shape to 'turtle
     Pneumonoultramicroscopicsilicovolcanoconiosis_turtle = turtle.Turtle()
     Pneumonoultramicroscopicsilicovolcanoconiosis_turtle.shape('turtle')
@@ -47,11 +50,16 @@ if __name__ == '__main__':
     Pneumonoultramicroscopicsilicovolcanoconiosis_turtle.penup()
     # TODO 5) Use the turtle's goto() method to set its position on the left
     #  side of the screen
+    Pneumonoultramicroscopicsilicovolcanoconiosis_turtle.goto(-400, 200)
+    Pneumonoultramicroscopicsilicovolcanoconiosis_turtle.width(10)
 
     # TODO 6) use a loop to repeat the previous instructions and create
     #  8 turtles lined up on the left side of the screen
     #  *HINT* click on the window to print the corresponding x, y location
-
+    Shrek.speed(10)
+    Shrek.penup()
+    Shrek.goto(-400, 140)
+    Shrek.shape('turtle')
     # TODO 7) Move each turtle forward a random distance between 1 and 20
 
     # TODO 8) Create a loop to keep moving each turtle until a turtle
