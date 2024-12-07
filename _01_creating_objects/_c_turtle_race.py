@@ -33,13 +33,12 @@ if __name__ == '__main__':
     draw_background()
 
     # TODO 1) Create an empty list of turtles
-    Shrek = turtle.Turtle()
+
     william_beckwith = turtle.Turtle()
     ur_dad_left_for_da_milk = turtle.Turtle()
     sparsh_thakore = turtle.Turtle()
-    jon_brower_minnoch = turtle.Turtle()
-    shrek_wazowski = turtle.Turtle()
-    donkey = turtle.Turtle()
+    matteeshee = turtle.Turtle()
+
     # TODO 2) Create a new turtle and set its shape to 'turtle
     Pneumonoultramicroscopicsilicovolcanoconiosis_turtle = turtle.Turtle()
     Pneumonoultramicroscopicsilicovolcanoconiosis_turtle.shape('turtle')
@@ -56,12 +55,32 @@ if __name__ == '__main__':
     # TODO 6) use a loop to repeat the previous instructions and create
     #  8 turtles lined up on the left side of the screen
     #  *HINT* click on the window to print the corresponding x, y location
-    Shrek.speed(10)
-    Shrek.penup()
-    Shrek.goto(-400, 140)
-    Shrek.shape('turtle')
-    # TODO 7) Move each turtle forward a random distance between 1 and 20
+    william_beckwith.speed(10)
+    william_beckwith.penup()
+    william_beckwith.goto(-400, 140)
+    william_beckwith.shape('turtle')
 
+    ur_dad_left_for_da_milk.speed(3)
+    ur_dad_left_for_da_milk.penup()
+    ur_dad_left_for_da_milk.goto(-400, 78)
+    ur_dad_left_for_da_milk.shape('turtle')
+
+    sparsh_thakore.speed(10)
+    sparsh_thakore.penup()
+    sparsh_thakore.goto(-400, 27.5)
+    sparsh_thakore.shape('turtle')
+
+    matteeshee.speed(10)
+    matteeshee.penup()
+    matteeshee.goto(-400, -141)
+    matteeshee.shape('turtle')
+    matteeshee.shapesize(19)
+    # TODO 7) Move each turtle forward a random distance between 1 and 20
+    Pneumonoultramicroscopicsilicovolcanoconiosis_turtle.forward(1)
+    william_beckwith.forward(8)
+    ur_dad_left_for_da_milk.forward(19)
+    sparsh_thakore.forward(3)
+    matteeshee.forward(13)
     # TODO 8) Create a loop to keep moving each turtle until a turtle
     #  crosses the finish line
     #  *HINT* click on the window to print the corresponding x, y location
