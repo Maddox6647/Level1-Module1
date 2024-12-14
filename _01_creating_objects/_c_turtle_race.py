@@ -76,14 +76,21 @@ if __name__ == '__main__':
     matteeshee.shape('turtle')
     matteeshee.shapesize(19)
     # TODO 7) Move each turtle forward a random distance between 1 and 20
-    Pneumonoultramicroscopicsilicovolcanoconiosis_turtle.forward(1)
-    william_beckwith.forward(8)
-    ur_dad_left_for_da_milk.forward(19)
-    sparsh_thakore.forward(3)
-    matteeshee.forward(13)
+    distance = random.randint(1, 20)
+    distance2 = random.randint(1, 20)
+    distance3 = random.randint(1, 20)
+    distance4 = random.randint(1, 20)
+    distance5 = random.randint(1, 20)
+
+    Pneumonoultramicroscopicsilicovolcanoconiosis_turtle.forward(distance)
+    william_beckwith.forward(distance2)
+    ur_dad_left_for_da_milk.forward(distance3)
+    sparsh_thakore.forward(distance4)
+    matteeshee.forward(distance5)
     # TODO 8) Create a loop to keep moving each turtle until a turtle
     #  crosses the finish line
     #  *HINT* click on the window to print the corresponding x, y location
+    for i in range(50):
 
     # TODO 9) When a turtle crosses the finish line, stop the race and
     #  indicate which turtle won the race.
