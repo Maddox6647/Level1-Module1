@@ -6,14 +6,16 @@ def setup():
     # using the loadImage("frog.png") function. For example:
     # global bg, frog
     # bg = loadImage("froggerBackground.png")
-    global bg, froggy
+    global bg, froggy, shrek_mike
     froggy = loadImage("frog.png")
     bg = loadImage("froggerBackground.png")
+    shrek_mike = loadImage("shrek-mike-removebg-preview.png")
     # 3. Use the resize method to set the size of the background variable
     # to the width and height of the sketch. Resize the frog to an
     # approvpriate size.
     froggy.resize(80, 80)
     bg.resize(800, 600)
+    shrek_mike.resize(440, 270);
     #
     
 def draw():
@@ -29,7 +31,9 @@ def draw():
     global frog_x, frog_y
     # 7. Use the Car class below to create a global car object in the
     # setup function and call the update and draw functions here.
+    image(shrek_mike, mouseX, mouseY)
     
+
     # 8. Create an intersects method that checks whether the frog collides
     # with the car. If there's a collision, move the frog back to the starting
     # point.
@@ -43,9 +47,9 @@ class Car:
         self.length = length
         self.speed = speed
         
-        self.car_image = loadImage("carRight.png")
+        self.car_image = loadImage("shrek-mike-removebg-preview.png")
         if self.speed < 0:
-            self.car_image = loadImage("carLeft.png")
+            self.car_image = loadImage("shrek-mike-removebg-preview.png")
         
         self.car_image.resize(self.length, self.length / 3)
         
