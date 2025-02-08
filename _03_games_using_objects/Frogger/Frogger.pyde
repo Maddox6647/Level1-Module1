@@ -1,53 +1,51 @@
 
 def setup():
-    # 1. Use the size function to set the size of your sketch
+    # 1. Use the  size function to set the size of your sketch
     size(800, 600);
-    # 2. Create 2 global variables for the background and the frog
-    # using the loadImage("frog.png") function. For example:
-    # global bg, frog
-    # bg = loadImage("froggerBackground.png")
+    # 2. Creat e 2 global variables for the background and the frog
+    # using t he loadImage("frog.png") function. For example:
+
     global bg, froggy, shrek_mike, frog_x, frog_y, car1, car2, car3, car4, car5, car6, car7, car8, car9, score
     froggy = loadImage("frog.png")
-    bg = loadImage("froggerBackground.png")
+    bg =  loadImage("froggerBackground.png")
+    bg.resize(800,600)
     shrek_mike = loadImage("shrek-mike-removebg-preview.png")
     frog_x = 400
     frog_y = 550
     score = 0
+
     
-
-    # 3. Use the resize method to set the size of the background variable
-    # to the width and height of the sketch. Resize the frog to an
-    # approvpriate size.
     froggy.resize(80, 80)
-    bg.resize(800, 600)
     shrek_mike.resize(440, 270)
-    #
+#     #
 
-    car1 = Car(250, 200, 250, -16)
-    car2 = Car(134, 100, 300, 14)
-    car3 = Car(0, 400, 300, 19)
-    car4 = Car(100, 100, 400, 10)
-    car5 = Car(349, 300, 400, 90)
+    car1 = Car(250, 200, 250, -6)
+    car1 = Car(250, 200, 250, -6)
+    car2 = Car(134, 300, 300, 2)
+    car3 = Car(0, 100, 300, 1)
+    car4 = Car(100, 100, 400, -5)
+    car5 = Car(349, 300, 400, 3)
     car6 = Car(200, 200, 300, 2)
-    car7 = Car(154, 100, 300, 60)
+    car7 = Car(154, 100, 300, 3.5)
     car8 = Car(301, 139, 300, -10)
-    car9 = Car(240, 370, 300, 30)
+    car9 = Car(240, 370, 300, 3)
 def draw():
     global score
-    # 4. Use the background function to draw the background
+#     # 4. Use the background function to draw the background
     background(bg)
+    # print("sdfghdfsk")
     text(str(score), 20, 20)
-    # 5. Use the image function to draw the frog.
-    # Run the program and check the background and frog are displayed.
+#     # 5. Use the image function to draw the frog.
+#     # Run the program and check the background and frog are displayed.
   
-    # 6. Create global frog_x and frog_y variables in the setup function
-    # and use them when drawing the frog. You will also have to put the
-    # following in the draw function:
+#     # 6. Create global frog_x and frog_y variables in the setup function
+#     # and use them when drawing the frog. You will also have to put the
+#     # following in the draw function:
     global frog_x, frog_y, car1, car2, car3, car4, car5, car6, car7, car8, car9
     image(froggy, frog_x,frog_y)
     
-    # 7. Use the Car class below to create a global car object in the
-    # setup function and call the update and draw functions here.
+#     # 7. Use the Car class below to create a global car object in the
+#     # setup function and call the update and draw functions here.
 
     
     car1.update()
@@ -60,14 +58,14 @@ def draw():
     car4.draw()
     car5.update()
     car5.draw()
-    car6.update()
-    car6.draw()
-    car7.update()
-    car7.draw()
-    car8.update()
-    car8.draw()
-    car9.update()
-    car9.draw()
+    # car6.update()
+    # car6.draw()
+    # car7.update()
+    # car7.draw()
+    # car8.update()
+    # car8.draw()
+    # car9.updates()
+    # car9.draw()
     if frog_collides(car1):
         frog_x = 400
         frog_y = 550
@@ -77,6 +75,13 @@ def draw():
     if frog_collides(car3):
         frog_x = 400
         frog_y = 550
+    if frog_collides(car4):
+        frog_x = 400
+        frog_y = 550
+    if frog_collides(car5):
+        frog_x = 400
+        frog_y = 550
+    
 
     if frog_y < 0:
         score += 1
