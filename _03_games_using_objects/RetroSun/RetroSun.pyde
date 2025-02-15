@@ -5,7 +5,7 @@ bg_color = color(31, 0, 48)
 
 # RGB colors
 sun_colors = [
-  color(212, 202, 11), 
+  color(240, 230, 44), 
   color(214, 198, 30), 
   color(211, 170, 26), 
   color(216, 157, 51), 
@@ -14,7 +14,7 @@ sun_colors = [
   color(212, 51, 98), 
   color(215, 29, 121), 
   color(217, 11, 139), 
-  color(217, 0, 151)
+  color(217, 0, 0)
 ]
 
 """
@@ -24,19 +24,22 @@ sun_colors = [
 """
 
 def setup():
-    pass
+    
     # TODO 1) Set the size of your sketch
-
+    size(800, 800)
     """
     * PART I: Drawing the sun
     * See 1st image 
     """
 
     # TODO 2) Draw the bg_color background color using the background() function
-    
+    background(0, 255, 255)
     # TODO 3) Draw an ellipse for the sun in the center of the window
     # Use fill(sun_colors[0]) to make it yellow
     # Use noStroke() to remove the black outline
+    fill(sun_colors[0])
+    noStroke()
+    ellipse(400, 400, 699, 699)
     
     # Do you see a yellow sun like in the 1st image?
     # If not, fix your code before proceeding.
@@ -50,7 +53,9 @@ def setup():
     """
     
     # Call the loadPixels() function to load the pixels list variable.
-    
+    loadPixels()
+    for i in range(len(pixels)):
+        
     # Loop through all the pixels in your window.
     # A pixel is a 1x1 square, so if your window width is 600 and the 
     # height is 400 (600x400), then there are 600 * 400 = 240,000 pixels
@@ -59,7 +64,7 @@ def setup():
         # to check if the pixel is the color of the yellow circle.
         # pixels[i] is the color of the pixel.
         # sun_colors[0] is the color of the sun.
-            
+            if pixels = 
             # If it's the same color we need to map the pixel to a
             # color in our sun_colors list (see 2nd gradient image)
        
