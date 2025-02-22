@@ -33,7 +33,7 @@ def setup():
     """
 
     # TODO 2) Draw the bg_color background color using the background() function
-    background(0, 255, 255)
+    background(bg_color)
     # TODO 3) Draw an ellipse for the sun in the center of the window
     # Use fill(sun_colors[0]) to make it yellow
     # Use noStroke() to remove the black outline
@@ -53,8 +53,8 @@ def setup():
     """
     
     # Call the loadPixels() function to load the pixels list variable.
-    loadPixels()
-    for i in range(len(pixels)):
+    
+        
         
     # Loop through all the pixels in your window.
     # A pixel is a 1x1 square, so if your window width is 600 and the 
@@ -63,11 +63,17 @@ def setup():
         # We want to change the color of our sun so use an if statement
         # to check if the pixel is the color of the yellow circle.
         # pixels[i] is the color of the pixel.
-        # sun_colors[0] is the color of the sun.
-            if pixels = 
+        # sun_colors[0] is the color of the sun
             # If it's the same color we need to map the pixel to a
             # color in our sun_colors list (see 2nd gradient image)
-       
+    loadPixels()
+
+    for i in range(len(pixels)):
+        if pixels[i] == sun_colors[0]:
+            #print("match")
+            y = i / width
+            step = map(y, 50, 750, 0, 1)
+            pixels[i] = interpolate_color(sun_colors, step)
             # The top of the sun is yellow (sun_colors[0]) and the bottom
             # of the sun is red (sun_colors[len(sun_colors) - 1]
             
@@ -79,15 +85,15 @@ def setup():
 
             # Call interpolateColor(sun_colors, step) and save the color
             # variable that's returned into a variable
-            
+
+
             # Set the pixel at pixels[i] to the color from the previous step
 
-
     # Call updatePixels() to apply the changes made to the pixels list
-
+    updatePixels()
 
 def draw():
-    pass
+    
     """
     * PART III: Drawing the missing sections at the bottom of the sun
     * See 3rd image
@@ -97,9 +103,9 @@ def draw():
     """
 
     # Call updatePixels() to redraw the background and sun
-    
+    updatePixels()
     # Set the fill() color to bg_color
-
+    fill(bg_color)
     # To draw each rectangle we need to find its x, y, width, height
     # *The y position can be any value within the sun:
     #   y = width / 2
@@ -109,7 +115,12 @@ def draw():
     #   x = sun_center_x - sun_radius
     # * The width can be 2 times the radius
     #   w = 2 * sun_radius
+y = width / 2
+h = 40
+x = sun_center_x - sun_radius
+w = 2 * sun_radius
    
+
     # Do you see a section missing from the sun like in the 3rd image?
 
     """
@@ -167,7 +178,6 @@ def draw():
 # Variable step should be between 0 and 1, inclusive
 def interpolate_color(color_list, step):
     sz = len(color_list)
-  
     if sz == 1 or step <= 0.0:
         return color_list[0]
     elif step >= 1.0:
