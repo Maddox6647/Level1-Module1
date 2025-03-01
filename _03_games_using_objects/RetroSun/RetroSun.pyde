@@ -1,6 +1,6 @@
 global bg_color, sun_colors, sun_radius
 
-sun_radius = 250
+sun_radius = 350
 bg_color = color(31, 0, 48)
 
 # RGB colors
@@ -39,7 +39,7 @@ def setup():
     # Use noStroke() to remove the black outline
     fill(sun_colors[0])
     noStroke()
-    ellipse(400, 400, 699, 699)
+    ellipse(400, 400, 700, 700)
     
     # Do you see a yellow sun like in the 1st image?
     # If not, fix your code before proceeding.
@@ -93,6 +93,7 @@ def setup():
     updatePixels()
 
 def draw():
+    sun_center_x = width / 2
     
     """
     * PART III: Drawing the missing sections at the bottom of the sun
@@ -103,9 +104,11 @@ def draw():
     """
 
     # Call updatePixels() to redraw the background and sun
-    updatePixels()
+    #updatePixels()
     # Set the fill() color to bg_color
     fill(bg_color)
+    
+    print("and drawing the background")
     # To draw each rectangle we need to find its x, y, width, height
     # *The y position can be any value within the sun:
     #   y = width / 2
@@ -115,11 +118,13 @@ def draw():
     #   x = sun_center_x - sun_radius
     # * The width can be 2 times the radius
     #   w = 2 * sun_radius
-y = width / 2
-h = 40
-x = sun_center_x - sun_radius
-w = 2 * sun_radius
-   
+    y = width / 2
+    h = 40
+    x = sun_center_x - sun_radius
+    w = 2 * sun_radius
+    fill(0,0,0)
+    print("done")
+
 
     # Do you see a section missing from the sun like in the 3rd image?
 
