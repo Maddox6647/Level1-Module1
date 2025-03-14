@@ -1,7 +1,21 @@
-global bg_color, sun_colors, sun_radius
+global bg_color, sun_colors, sun_radius, y, h, x, w, y2, h2, y3, h3
+sun_center_y = 400
+sun_center_x = 400
+sun_radius = 350
 
-
+y = sun_center_y + sun_radius
+h = 110
+x = sun_center_x - sun_radius
+w = 800
 bg_color = color(31, 0, 48)
+
+y2 = sun_center_y + sun_radius + 100
+h2 = 110
+
+y3 = sun_center_y + sun_radius + 200
+h3 = 110
+
+w = 800
 
 # RGB colors
 sun_colors = [
@@ -93,9 +107,7 @@ def setup():
     updatePixels()
 
 def draw():
-    sun_center_y = 400
-    sun_center_x = 400
-    sun_radius = 350
+    global y, h, x, w, bg_color, y2, h2, y3, h3
     
     """
     * PART III: Drawing the missing sections at the bottom of the sun
@@ -120,14 +132,15 @@ def draw():
     #x = sun_center_x - sun_radius
     # * The width can be 2 times the radius
     #   w = 2 * sun_radius
-    y = sun_center_y
-    h = 110
-    x = sun_center_x - sun_radius
-    w = width
+
 
   
     fill(bg_color)
+
     rect(x, y, w, h)
+    rect(x, y2, w, h2)
+    rect(x, y3, w, h3)
+    
 
     # Do you see a section missing from the sun like in the 3rd image?
 
@@ -148,12 +161,23 @@ def draw():
     # See image 4
     
     
-    
-    #y -= 2 
-    #height -= 0.5 
-    #if y < 0:  
-        #y = width / 2
-        #height = 40  
+    y -= 2
+    h -= .5
+    if h < 0:  
+        y = sun_center_y + sun_radius
+        h = 110
+        
+    y2 -= 2
+    h2 -= 0.4
+    if h2 < 0:  
+        y2 = sun_center_y + sun_radius + 100
+        h2 = 110
+        
+    y3 -= 2
+    h3 -= 0.3
+    if h3 < 0:  
+        y3 = sun_center_y + sun_radius + 200
+        h3 = 110
     
     
     
@@ -168,9 +192,9 @@ def draw():
     # created if it doesn't already exist.
 
     # Adjust the amount to decrease so that it disappears close to the top.
-    if y < sun_center_y - sun_radius:  # If the rectangle moves above the top of the sun
-        y = sun_center_y  # Reset the y-position to the bottom of the sun
-        height = 40  # Reset the height back to 40 pixels
+    # if y < sun_center_y - sun_radius:  # If the rectangle moves above the top of the sun
+    #     y = sun_center_y  # Reset the y-position to the bottom of the sun
+    #     h = 40  # Reset the height back to 40 pixels
 
     # Add code to reset the height of the rectangle when it moves back to
     # the bottom of the sun.
